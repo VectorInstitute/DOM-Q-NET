@@ -1,0 +1,142 @@
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc {
+  /* --- CSS for This Template --- */
+  /* --- Selectors from Global CSS --- */
+  /* -- Pointer at edge of tooltip -- */
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc h1 {
+  color: #73C41D;
+  font-family: BhrHeaderFont,Trebuchet MS;
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc p {
+  color: #777777;
+  font-size: 14px;
+  margin: 0px 0px 5px 0px;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc a {
+  color: #6994bb;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc a:hover {
+  color: #0b253d;
+  text-decoration: underline;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc .nextbutton {
+  margin: 0px;
+  background-color: white;
+  color: #4DA50F;
+  font-weight: normal;
+  cursor: pointer;
+  border: 1px solid #4DA50F;
+  padding: 6px 7px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 140%;
+  white-space: nowrap;
+  background-image: none;
+  text-align: center;
+  vertical-align: middle;
+  float: right;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-container_ {
+  /* -- Guide border, shadow, background, etc. -- */
+  border-radius: 6px;
+  background-color: white;
+  padding: 20px;
+  color: #777777;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 300;
+  border: 2px solid #00B6DC;
+  box-shadow: 0px 0px 12px #999;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-container_ ._pendo-guide-content_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+  text-align: left;
+  padding: 0;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-container_ ._pendo-close-guide_ {
+  /* Close guide icon */
+  display: inline;
+  font-size: 20px;
+  font-weight: 100;
+  top: 6px;
+  right: 10px;
+  color: #777;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-container_ ._pendo-close-guide_:hover {
+  /* Close guide icon hover effects*/
+  color: #000;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow_,
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border_ {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border-style: solid;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-top_,
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-top_ {
+  border-top: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-left_,
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-left_ {
+  border-left: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-right_,
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-right_ {
+  border-right: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-bottom_,
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-bottom_ {
+  border-bottom: 0;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow_ {
+  z-index: 100;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-top_ {
+  border-bottom-color: #fff;
+  top: 3px !important;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-left_ {
+  border-right-color: #fff;
+  left: 2px !important;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-right_ {
+  border-left-color: #fff;
+  right: 2px !important;
+  left: auto !important;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-bottom_ {
+  border-top-color: #fff;
+  bottom: 2px !important;
+  top: auto !important;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-top_ {
+  border-bottom-color: #00B6DC;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-left_ {
+  border-right-color: #00B6DC;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-right_ {
+  border-left-color: #00B6DC;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-guide-arrow-border-bottom_ {
+  border-top-color: #00B6DC;
+}
+#_pendo_g_M_mJopjsHs4uzxfzWoK4oZ9JSnc ._pendo-credits_ {
+  display: none;
+}

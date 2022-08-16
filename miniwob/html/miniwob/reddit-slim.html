@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://www.reddit.com/account/login/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Reddit Log In Task</title>
+
+  <link rel="shortcut icon" type="image/png" sizes="512x512"
+    href="https://www.redditstatic.com/accountmanager/favicon/favicon-512x512.png">
+  <link rel="shortcut icon" type="image/png" sizes="192x192"
+    href="https://www.redditstatic.com/accountmanager/favicon/favicon-192x192.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32"
+    href="https://www.redditstatic.com/accountmanager/favicon/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" sizes="16x16"
+    href="https://www.redditstatic.com/accountmanager/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.redditstatic.com/accountmanager/favicon/apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="https://www.redditstatic.com/accountmanager/favicon/safari-pinned-tab.svg"
+    color="#5bbad5">
+  <link rel="canonical" href="https://www.reddit.com/login/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://www.redditstatic.com/accountmanager/favicon/mstile-310x310.png">
+  <meta name="msapplication-TileImage" content="https://www.redditstatic.com/accountmanager/favicon/mstile-310x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="description" content="Don’t worry, we won’t tell anyone your username. Log in to your Reddit account.">
+
+
+
+  <link rel="stylesheet" href="../reddit/vendor.4edfac426c2c4357e34e.css">
+
+  <link rel="stylesheet" href="../reddit/theme.db2e6cc2454285e7d90f.css">
+
+  <link rel="stylesheet" href="../reddit/login.a2a948983c9f12b10c1b.css">
+
+  <link rel="stylesheet" type="text/css" href="../core/reddit.css">
+
+  <script src="../core/core.js"></script>
+  <script src="../core/d3.v3.min.js"></script>
+  <script src="../common/ui_utils.js"></script>
+  <!-- <script src="../core/jquery-ui/external/jquery/jquery.js"></script> -->
+  <!-- <script src="../core/d3.v3.min.js"></script> -->
+  <script>
+    core.EPISODE_MAX_TIME = 20000;
+    var genProblem = function () {
+      d3.select('#loginUsername')[0][0].value = '';
+      d3.select('#loginPassword')[0][0].value = '';
+
+      var user = core.sample(ui_utils.FIFTY_NAMES).toLowerCase();
+      var password = ui_utils.generateString(2, 6);
+      // var user = 'john'
+      // var password = 'willes'
+
+      //d3.select('#query').html('Enter the <span class="bold">username</span> "' + user + '" and the <span class="bold">password</span> "' + password + '" into the text fields and press login.');
+      d3.select('#query').html('Login the <span class="bold">username</span> "' + user + '" with the <span class="bold">password</span> "' + password + '" .');
+
+      // reward awarder
+      d3.select('#subbtn').on('click', function () {
+        var u = d3.select('#loginUsername')[0][0].value;
+        var p = d3.select('#loginPassword')[0][0].value;
+        let r
+        if (u === user && p === password) {
+          r = 1.0
+        } else if (u === user || p === password) {
+          r = 0.01
+        } else {
+          r = -1.0
+        }
+        console.log(r)
+        // var r = (u === user && p === password) ? 1.0 : -1.0;
+        core.endEpisode(r, r > 0);
+      });
+    }
+
+    window.onload = function () {
+      core.startEpisode();
+    }
+  </script>
+
+
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="query"></div>
+    <div id="area">
+      <div class="App m-desktop   ">
+
+        <main class="Login">
+
+          <div class="OnboardingStep Onboarding__step mode-auth" data-step="username-and-password">
+            <div class="Step">
+
+              <div class="Art Step__art"></div>
+
+              <div class="Step__content">
+                <h1 class="Title m-no-margin">Log in</h1>
+
+
+                <form class="AnimatedForm" onsubmit="return false" action="" method="post">
+
+                  <fieldset class="AnimatedForm__field m-required login hideable m-valid">
+
+                    <input id="loginUsername" class="AnimatedForm__textInput " type="text" name="username" required=""
+                      placeholder="Username" data-empty="false">
+                    <label class="AnimatedForm__textInputLabel " for="loginUsername">
+
+                      Username
+
+                    </label>
+                    <div class="AnimatedForm__errorMessage"></div>
+                  </fieldset>
+
+
+                  <fieldset class="AnimatedForm__field m-required password hideable m-small-margin">
+
+                    <input id="loginPassword" class="AnimatedForm__textInput " type="password" name="password"
+                      required="" placeholder="
+        Password
+      " data-empty="true">
+                    <label class="AnimatedForm__textInputLabel " for="loginPassword">
+
+                      Password
+
+                    </label>
+                    <div class="AnimatedForm__errorMessage"></div>
+                  </fieldset>
+
+
+                  <fieldset class="AnimatedForm__field m-small-margin">
+                    <button id="subbtn" class="AnimatedForm__submitButton m-full-width" type="submit">
+
+                      Log In
+
+                    </button>
+                    <div class="AnimatedForm__submitStatus">
+                      <div class="AnimatedForm__submitStatusIcon"></div>
+                      <span class="AnimatedForm__submitStatusMessage"></span>
+                    </div>
+                  </fieldset>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

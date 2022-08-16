@@ -1,7 +1,7 @@
 import os
 import time
 import shutil
-import ipdb
+#import ipdb
 import json
 import argparse
 import collections
@@ -10,11 +10,13 @@ import collections
 #import entries.playground.entry as playground_entry
 import entries.official.entry as official_entry
 import entries.demo.entry as demo_entry
+import entries.detection_demo.entry as detection_demo_entry
 
 
 ENTRY_LOOKUP = {
         "official": official_entry.main,
-        "demo": demo_entry.main
+        "demo": demo_entry.main,
+        'detection_demo': detection_demo_entry.main
         }
 
 

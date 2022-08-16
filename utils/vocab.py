@@ -138,7 +138,11 @@ class LazyVocab(Vocab):
         self._vocab_name = vocab_name
 
     def __getitem__(self, token):
-        token_id = self._vocab.get(token)
+        try:
+            token_id = self._vocab.get(token)
+        except:
+            return self._unk_id
+            import pdb; pdb.set_trace()
         # pdb.set_trace()
         if token_id is None:
             if self._curr_id < self._max_size:

@@ -1,0 +1,245 @@
+#content .sideColumnRight {
+	width: 312px;
+}
+
+#dailyFields li { padding: 0; }
+input.dailyAmount { vertical-align: baseline !important; }
+
+/*
+* ScrollBox overrides
+*/
+.ScrollBox { margin-top: 3px; }
+.ScrollBox .ScrollBox__scrollContent { max-height: 185px; }
+.ScrollBox__listItem .fieldInfo-error {
+	margin-bottom: 12px;
+	top: 8px;
+}
+
+.sideColumnRight .Box {
+	margin-bottom: 24px;
+}
+
+.sideColumnRight .Box--callout {
+	min-height: 36px;
+	padding: 0 15px;
+	line-height: 36px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-right-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+}
+
+.sideColumnRight #time-off-request-header {
+	position: relative;
+}
+
+.sideColumnRight #time-off-request-header form label {
+	display: none;
+}
+
+.sideColumnRight #time-off-request-header form {
+	float: right;
+	width: auto
+}
+
+.sideColumnRight #time-off-request-header button.ui-datepicker-trigger {
+	border-radius: 3px;
+	float: right;
+	margin: 0;
+	padding: 0 2px 1px 5px;
+	position: absolute;
+	top: 4px;
+	right: 7px;
+}
+
+.sideColumnRight .pto-balances {
+	min-height: 50px;
+	overflow-x: hidden;
+	padding: 9px 15px;
+	position: relative;
+}
+
+.sideColumnRight .pto-balances .no-balance-results {
+	text-align: center;
+	font-size: 14px;
+	color: #777;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.sideColumnRight .pto-balances table {
+	margin: 0;
+}
+
+.sideColumnRight .pto-balances table td {
+	margin: 0;
+	padding: 2px 0;
+	vertical-align: middle;
+}
+
+.sideColumnRight .pto-balances table td:first-child {
+	color: #222;
+	font-size: 16px;
+	font-weight: 600;
+	width: 25px;
+}
+
+.sideColumnRight .pto-balances table td:last-child {
+	color: #555;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.sideColumnRight .pto-balances table td:last-child .smallYtd {
+	font-size: 11px;
+}
+
+.sideColumnRight .Box p.request-box-header {
+	line-height: 36px;
+	margin: 0;
+	padding: 0;
+}
+
+.sideColumnRight .Box a.btnIcon {
+	float: right;
+	height: 25px;
+	margin: 5px 0 0;
+	padding: 2px 1px 0 1px;
+	width: 25px;
+}
+
+.sideColumnRight .Box .calc-balance-request {
+	height: 24px;
+	padding: 0;
+	width: 24px;
+}
+
+.BalanceList {}
+
+.BalanceList__item {
+	display: flex;
+	width: 265px;
+	margin: 6px 0;
+}
+
+.BalanceList__item__icon {
+	width: 25px;
+	flex: 0 0 auto;
+}
+
+.BalanceList__item__type {
+	color: #222;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex: 0 1 auto;
+	padding-top: 3px;
+}
+
+.BalanceList__item__used {
+	white-space: nowrap;
+	color: #777;
+	flex: 0 0 auto;
+	padding-top: 3px;
+}
+
+.BalanceList__item__used .smallYtd {
+	font-size: 11px;
+}
+
+.BalanceList__item__help {
+	cursor: pointer;
+	flex: 0 0 auto;
+	position: relative;
+	top: 3px;
+	left: 5px;
+	white-space: nowrap;
+}
+
+.BalanceList__item__help use {
+	pointer-events: none;
+}
+
+.ScheduledList {}
+
+.ScheduledList__header {
+	margin-bottom: 2px;
+	padding: 0 2px;
+}
+
+.ScheduledList__header__amount {
+	color: #777;
+}
+
+.ScheduledList__divider {
+	border-color: #c4c4c4;
+	margin: 2px 0 0;
+}
+
+.ScheduledList__items {}
+
+.ScheduledList__items__item {
+	padding: 8px 17px 10px;
+}
+
+.ScheduledList__items__item:not(:last-of-type) {
+	border-bottom: 1px dotted #c0c0c0;
+}
+
+.ScheduledList__items__item__amount,
+.ScheduledList__items__item__date ,
+.ScheduledList__items__item__review {
+	margin: 0;
+	line-height: 17px;
+}
+
+.ScheduledList__items__item__review {
+	font-size: 13px;
+}
+
+.RequestMobilePromotion {
+	border-top: 1px solid #cfcfcf;
+	padding: 9px 30px 9px 15px;
+	position: relative;
+	display: flex;
+}
+
+.RequestMobilePromotion__close {
+	color: #c2c2c2;
+	cursor: pointer;
+	box-sizing: border-box;
+	border-radius: 2px;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	text-align: center;
+	height: 16px;
+	width: 16px;
+	line-height: 16px;
+}
+
+.RequestMobilePromotion__close:hover {
+	line-height: 14px;
+	border: 1px solid #cfcfcf;
+}
+
+.RequestMobilePromotion__phoneIcon {
+	margin-right: 8px;
+	width: 17px;
+	height: 30px;
+}
+
+.RequestMobilePromotion__header {
+	margin: 0 0 3px;
+}
+
+.RequestMobilePromotion__links {
+	font-size: 13px;
+}

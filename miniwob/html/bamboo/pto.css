@@ -1,0 +1,224 @@
+#one-col form#main_form table { width: inherit; }
+#main_form th { vertical-align: top; }
+#one-col form table #inner-form table { margin: 0; padding: 0; width: inherit; }
+
+.ui-datepicker td.requested a { background: #F9D479; border-color: #F5AA79; }
+.ui-datepicker td.approved a { background: #A6FBAA; border-color: #42A500; }
+
+div.ui-datepicker-buttonpane { position: relative; }
+#pto-legend { position: absolute; top: 13px; left: 85px; font-size: 12px; }
+#pto-legend li { display: block; float: left; width: 82px; text-align: left; vertical-align: middle; }
+#pto-legend span { display: inline-block; width: 10px; height: 10px; border: 1px solid white; margin-right: 4px; vertical-align: middle; }
+#pto-legend .requested span { background: #F9D479; border-color: #F5AA79; }
+#pto-legend .approved span { background: #A6FBAA; border-color: #42A500; }
+
+.sideColumnRight > .box-mod { padding-bottom: 0; }
+#side-col.loading div.box-content { background: url(/images/spinner.gif) 175px 11px no-repeat; }
+#side-col table { margin: 0px 10px; width: auto; }
+#side-col table th { font-weight: 600; text-align: right; width: 80px; white-space: nowrap; padding: 0px 0px 8px; }
+#side-col table td { padding: 0px 0px 8px 10px; }
+#pendingPtoTool #buttoncontainer{
+	margin: 6px 0 10px 0;
+}
+
+#pendingPtoTool .employee-list-rows {
+	border: 1px solid #DFDFDF;
+	border-top: none;
+}
+
+#pendingPtoTool .employee-list{
+	border: 1px solid #DFDFDF;
+}
+#pendingPtoTool .employee-list-rows  table{
+	border: none;
+}
+
+.actionLinks{
+	margin: 10px 0 5px 20px;
+}
+
+#pendingPtoTool .date, #pendingPtoTool .type{
+	font-weight: 600;
+	font-size: 10pt;
+	margin-bottom: 4px;
+	display: inline-block;
+	
+
+}
+#pendingPtoTool .calIcon{
+/*	visibility: hidden;*/
+	display: inline-block;
+	background-image: url(/images/btn_calendar_16.gif);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-right: 15px;
+	float: right;
+	height: 16px;
+	margin-right: 13px;
+	margin-top: -2px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	opacity: 0;
+	text-decoration: none;
+
+}
+.employee-list th.last{
+	padding-right: 25px;
+}
+
+.employee-list-rows td.last{
+	padding-right: 10px;
+}
+
+.employee-list th input{
+	margin: 0px 3px;
+	display: inline;
+}
+
+#calendar .legend{
+	display: inline-block;
+	margin-top: 18px;
+}
+
+#pendingPtoTool .fc-header-center{
+	width: 24%;
+}
+
+.actioned .viewPtoHistory{
+	float: right;
+	margin-right: 30px;
+}
+
+.pastDue{
+	color: #FF0000;
+}
+
+.type .hours{
+	font-weight: normal;
+}
+
+#activeFilters  {
+	font-weight: 600;
+}
+#activeFilters li {
+	margin-top: 3px;
+}
+.filterList{display: inline}
+.filterList li{
+	font-weight: normal;
+	display: inline;
+	padding: 0 3px 0 10px;
+}
+
+.filterList li a.x{
+	display: inline-block;
+	float: none;
+	height: 8px;
+}
+#zeroBalAlert p{
+	width:335px;
+}
+
+#zeroBalAlert table td{
+	font-size: 11px;
+}
+
+#zeroBalAlert table{
+	margin: 5px auto;
+	width:90%;
+}
+
+#zeroBalAlert table tr:last-child{
+	border-top: 1px solid #dfdfdf;
+}
+
+.amountErrorMessage {
+	position: relative;
+	top: 3px;
+	vertical-align: middle;
+}
+
+/*.fieldDiv.multiple { margin-left: 10px; }*/
+#multipleDayList,
+#multipleDayList #dailyFields,
+#multipleDayList .dailyTotal {
+	box-sizing: border-box;
+}
+#multipleDayList #dailyFields,
+#multipleDayList .dailyTotal,
+div.multipleDayList .dailyTotal {
+	width: 100%;
+}
+
+#multipleDayList.multiple {
+	margin-top: 3px;
+	padding: 0;
+	border: solid #afafaf 1px;
+	border-radius: 3px;
+	background-color: #f8f8f8;
+	box-shadow: inset 0px 1px 4px -2px rgba(0,0,0,.5);
+	width: 380px;
+}
+
+#multipleDayList #dailyFields > li {
+	padding: 0;
+}
+#multipleDayList.multiple #dailyFields > li {
+	padding: 3px 16px;
+}
+
+#multipleDayList span.description { margin-left: 8px; }
+.multiple #dailyFields {
+	max-height: 185px;
+	overflow: auto;
+	padding: 5px 0;
+}
+
+#multipleDayList .ScrollBox__listItem:not(.disabled) .ScrollBox__listItem-description,
+.multipleDayList .ScrollBox__listItem:not(.disabled) .ScrollBox__listItem-description {
+	color: #222;
+}
+
+.multiple #dailyFields > li { padding-bottom: 0px; }
+.multiple .dailyTotal {
+	border-top: solid #afafaf 1px;
+	margin: 0;
+	padding: 7px 0 6px 15px;
+	width:140px;
+	font-weight: 600;
+	font-size: 15px;
+	color: #222222;
+	background-color: #ffffff;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.multiple .dailyTotalAmount { margin: 0 4px 0 10px; }
+
+.multiple .dayDate {
+	width: 85px;
+	display: inline-block;
+}
+.multiple .bicon-holiday { background-position: bottom; }
+
+#dailyFields { font-size: 15px; color: #222222; }
+#dailyFields li { padding-left: 0; }
+#dailyFields .holiday { font-size: 13px; }
+li.disabled, li.disabled span.description { color: #909090; font-size: 15px; }
+
+.bicon-holiday {
+	vertical-align: baseline;
+	margin-right: 3px;
+	position: relative;
+	top: 1px;
+}
+
+.bicon-holiday:hover { background-position: top; }
+
+body[data-feature-toggles~="jade"] .SiteFooter__container--actions .SiteFooter__wrapper--left {
+	/* Overriding the shared employee styles since we import those styles and we don't want to redo the styling for the request pto page.
+	** Chatted with Davis about it and he was fine with this. Added a story to JD-1438 to revisit how we do this later.
+	** Have to do it in this legacy CSS file because doing it in the stylus file for Pto.mod/index.js was overriding all employee tab styles
+	*/
+	padding-left: 0 !important;
+}

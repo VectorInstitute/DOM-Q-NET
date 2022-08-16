@@ -1,0 +1,79 @@
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI {
+  /* --- CSS for This Template --- */
+  /* --- Selectors from Global CSS --- */
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI h1 {
+  color: #73C41D;
+  font-family: BhrHeaderFont,Trebuchet MS;
+  font-size: 22px;
+  margin: 0 0 12px 0;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI p {
+  color: #777777;
+  font-size: 16px;
+  line-height: 140%;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI a {
+  color: #006EC2;
+  font-size: 16px;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI a:hover {
+  color: #006EC2;
+  text-decoration: underline;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI .dismiss-button {
+  margin: 10px 0 0 0;
+  background-color: white;
+  color: #4DA50F;
+  font-weight: normal;
+  cursor: pointer;
+  border: 1px solid #4DA50F;
+  padding: 6px 7px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 140%;
+  white-space: nowrap;
+  background-image: none;
+  text-align: center;
+  vertical-align: middle;
+  float: right;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI .dismiss-button:hover {
+  opacity: .7;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI ._pendo-guide-container_ {
+  /* -- Guide border, shadow, background, etc. -- */
+  background-color: white;
+  padding: 25px;
+  color: #999;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  border-radius: 7px;
+  border: 2px solid #00B6DC;
+  box-shadow: 0px 0px 12px #999;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI ._pendo-guide-container_ ._pendo-guide-content_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+  text-align: left;
+  padding: 0;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI ._pendo-guide-container_ ._pendo-close-guide_ {
+  /* Close guide icon */
+  display: inline;
+  font-size: 24px;
+  font-weight: 100;
+  top: 1px;
+  right: 6px;
+  color: #777;
+  background: 0 !important;
+  border: 0 !important;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI ._pendo-guide-container_ ._pendo-close-guide_:hover {
+  /* Close guide icon hover effects*/
+  color: #000;
+}
+#_pendo_g_uld2bQ2GShfxJp52n6yGXxPLuUI ._pendo-credits_ {
+  display: none;
+}

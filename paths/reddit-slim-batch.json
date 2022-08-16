@@ -1,0 +1,11 @@
+{
+    "plot_path1": "compare/reddit_slim",
+    "plot_path2": "compare/social_media",
+    "plot_path3": "compare/search_engine",
+    "plot_path4": "compare/login_user",
+    "plot_path5": "compare/enter_text",
+    "plot_path6": "compare/enter_password",
+    "plot_path7": "compare/click_option",
+    "plot_path8": "compare/click_checkboxes",
+    "plot_path9": "compare/enter_text_dynamic"
+}
