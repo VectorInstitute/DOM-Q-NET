@@ -5,8 +5,8 @@ class EnvWrap:
     def __init__(self, env):
         self._env = env
         self._epi_step = 0
-        self._epi_reward = -1.0
-        #self._epi_reward = 0
+        # self._epi_reward = -1.0
+        self._epi_reward = 0
 
     @property
     def epi_step(self):
@@ -18,8 +18,8 @@ class EnvWrap:
 
     def reset(self):
         self._epi_step = 0
-        #self._epi_reward = 0
-        self._epi_reward = -1.0
+        self._epi_reward = 0
+        # self._epi_reward = -1.0
         items_tuple = self._env.reset()
         return items_tuple
 

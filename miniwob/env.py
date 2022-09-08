@@ -39,8 +39,8 @@ class MiniWoBEnvironment:
         self._curr_goal = None
         self._curr_doms, self._curr_goal, self._curr_leaves, self._curr_top_dom = self._get_env_state()
         self._epi_step = 0
-        #self._epi_reward = 0
-        self._epi_reward = -1.0
+        self._epi_reward = 0
+        # self._epi_reward = -1.0
         item_tuple = (self._curr_doms, self._curr_goal, self._curr_leaves)
         # ipdb.set_trace()
         return item_tuple

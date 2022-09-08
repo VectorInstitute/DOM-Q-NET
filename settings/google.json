@@ -1,5 +1,5 @@
 {
-    "env": ["reddit-slim"],
+    "env": ["google-detection"],
     "T_ckpt": 2500,
     "save_ckpt": true,
     "io_T": 50,
