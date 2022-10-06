@@ -116,7 +116,7 @@ def create_build_f(nn_hs, qlearn_hs, other_hs, prints_dict, ckpt_path=None, V_te
     return build_net_f, save_dict, common_track_f
 
 
-def create_env_f(nn_hs, qlearn_hs, other_hs, settings):
+def create_env_f(nn_hs, qlearn_hs, other_hs, settings, dynamic_params=None):
     customizer = custom.create_customizer(
         settings.get("custom_mode"),
         other_hs["attr_vocabs"],
@@ -126,7 +126,7 @@ def create_env_f(nn_hs, qlearn_hs, other_hs, settings):
             for env_name in settings["env"]]
         return envs
     else:
-        return MiniWoBEnvironment(settings["env"], customizer)
+        return MiniWoBEnvironment(settings["env"], customizer, dynamic_params=dynamic_params)
 
 
 def create_action_space_f(nn_hs, qlearn_hs, other_hs, settings):

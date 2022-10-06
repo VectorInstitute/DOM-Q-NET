@@ -91,6 +91,9 @@ class DomLeavesEmbedding(nn.Module):
         #fg_color, bg_color = x["fg_color"][4:-1].split(","), x["bg_color"][4:-1].split(",")
         # Get actual num_doms before padded
         num_doms = len(tag_tokens)
+        # print("DOMS")
+        # print(self._max_num_doms)
+        # print(num_doms)
         assert self._max_num_doms - num_doms >= 0
 
         # Handle oov for text only for now.
@@ -101,6 +104,9 @@ class DomLeavesEmbedding(nn.Module):
         top_tokens = top_tokens[:self._max_num_doms] + [[0.0] for _ in range(self._max_num_doms-num_doms)]
 
         text_oov2randidx_dict = {}
+        # print("GOALS")
+        # print(self._max_num_goal_tokens)
+        # print(len(goal))
         assert self._max_num_goal_tokens - len(goal)>=0
         goal_ids, _max_num_goal_tokens, goal_mask, goal_oov_mask, goal_oov_ids = self._E_q.prep(goal, text_oov2randidx_dict)  # [N]
 

@@ -1,0 +1,321 @@
+/* Layout
+---------------------------------*/
+@page {
+	margin: 0.5in;
+}
+
+* {
+	background-color: transparent;
+	color: black;
+	text-shadow: none;
+	filter: none;
+	-ms-filter: none;
+}
+
+a,
+a:visited {
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100% !important;
+}
+
+body,
+#one-col:not(.main-mod),
+#col-wrap,
+#one-full {
+	float: none !important;
+	width: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: visible;
+	white-space: normal !important;
+}
+
+#below-nav {
+	float: none;
+}
+
+#header h1 {
+	width: 100%;
+	font-weight: normal;
+	padding: 0 0 2mm 0;
+	border-bottom: 1px solid #cccccc;
+	color: #000;
+}
+
+/* Typography
+---------------------------------*/
+body:not([data-feature-toggles~="jade"]),
+body:not([data-feature-toggles~="jade"]) h1,
+body:not([data-feature-toggles~="jade"]) h3,
+body:not([data-feature-toggles~="jade"]) h4,
+body:not([data-feature-toggles~="jade"]) h5,
+body:not([data-feature-toggles~="jade"]) h6 {
+	font-family: Source sans pro, sans-serif;
+}
+
+body {
+	text-align: left;
+	color: #000 !important;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+	color: #000;
+}
+
+h1 {
+	font-size: 21pt;
+}
+
+h2 {
+	font-size: 16pt;
+}
+
+h3 {
+	font-size: 12pt;
+}
+
+h4 {
+	font-size: 12pt;
+}
+
+h5 {
+	font-size: 10pt;
+}
+
+#report-list h3 {
+	border-bottom: 1px solid #ebebeb;
+}
+
+p {
+	font-size: 10pt;
+	line-height: 14pt;
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+}
+
+dd,
+dt,
+li {
+	font-size: 10pt;
+	margin: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	font-weight: normal;
+}
+
+li strong {
+	font-weight: normal;
+}
+
+table {
+	border-spacing: 0;
+	width: 100% !important;
+}
+
+table.edit-table,
+tr,
+td,
+th {
+	page-break-after: auto;
+}
+
+thead {
+	display: table-header-group;
+}
+
+tfoot {
+	display: table-footer-group;
+}
+
+#one-full {
+	width: 100%;
+}
+
+form table th {
+	overflow: visible !important;
+	white-space: pre-wrap !important;
+}
+
+table.employee-list {
+	border: 1px solid #CCCCCC;
+}
+
+table.employee-list th {
+	background: #F1F1ED;
+}
+
+table.employee-list th,
+table.employee-list td {
+	border-bottom: 1px solid #CCCCCC;
+	padding: 9px 5px 7px 15px;
+	text-align: left;
+}
+
+table.employee-list td {
+	border-right: 1px solid #CCCCCC;
+}
+
+/* Links
+---------------------------------*/
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+	color: #222;
+	text-decoration: none;
+}
+
+.chzn-done {
+	display: inline !important;
+}
+
+/* CUSTOM
+---------------------------------*/
+#report-list {
+	padding: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block !important;
+}
+
+* img.chart,
+.google-chart img {
+	width: inherit;
+	height: inherit;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#emp-header-photo img,
+#inside-header h1 img,
+img.emp-pic,
+img.empPhoto {
+	display: block;
+}
+
+#emp-header-info * {
+	margin: 0;
+}
+
+#emp-header-photo,
+#header h1 {
+	margin-left: 0
+}
+
+input[type='text'],
+textarea,
+select,
+input[type='text']:focus,
+textarea:focus,
+select:focus {
+	border: none;
+	background: #fff;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none !important;
+}
+
+#below-nav {
+	clear: both;
+}
+
+span.text-label {
+	background: #fff;
+	color: #000;
+	text-shadow: none;
+}
+
+.fixedPageHeader .tableContainer.overflowScroll:before {
+	content: none !important;
+}
+
+.fixedPageHeader #inside-content,
+.fixedPageHeader #root {
+	margin-top: 0 !important;
+}
+
+.fixedPageHeader .tableContainer.overflowScroll:before,
+.fixedPageHeader .fixedToHeader,
+.fixedPageHeader .hasFixedHeader .header-row,
+.ReportPageHeader,
+.ReportTable thead tr,
+.ts-list thead tr,
+#dirHead {
+	position: static !important;
+	left: auto !important;
+	right: auto !important;
+	top: auto !important;
+	width: auto !important;
+	min-width: auto !important;
+}
+
+/* Hidden
+---------------------------------*/
+.ba-banner--trial,
+#manage-nav,
+.numbers,
+#search-box,
+#navTabs,
+#exports,
+#feedback-btn,
+.header-alert,
+#headerSite,
+#navMain,
+#footer,
+#nav-tabs,
+.navSpacer,
+#addLinks,
+.btn,
+#looping,
+#content-nav,
+.below-link,
+#header-alert,
+#emp-header-photo > span,
+.deleteIcon,
+a.history-modal,
+#snapABug_Button,
+#showLayout, 
+#showLayout + img#layout,
+#employee-comments #comment-0,
+.breadcrumb,
+.ui-datepicker,
+.chzn-container,
+input[type="checkbox"] + label > span:first-child,
+input[type="radio"] + label > span:first-child,
+#filterForm,
+.fixedPageHeader .hasFixedHeader .header-row:nth-child(2),
+.ReportTable thead tr:nth-child(2),
+.ReportPageHeader__right,
+.ReportPageHeader__other,
+.ReportPageHeaderSpacer,
+.Report .SpacerElement,
+.SiteHeaderSpacer,
+.Balloon--Dropdown {
+	display: none !important;
+	visibility: hidden !important;
+}

@@ -56,9 +56,11 @@ class MiniWoBInstance:
         #NOTE Chrome driver
         url = base_url + task_file
         chrome_options = Options()
-        chrome_options.add_argument("--headless")
+        # chrome_options.add_argument("--headless")
+        chrome_options.binary_location = "/h/jwilles/chrome/google-chrome"
+        # chrome_options.excutable_location = "/h/jwilles/cdriver/chromedriver"
         self._url = url
-        self._driver = webdriver.Chrome(chrome_options=chrome_options)
+        self._driver = webdriver.Chrome(chrome_options=chrome_options, executable_path="/h/jwilles/cdriver/chromedriver")
         self._driver.get(url)
         print("Chrome Task title: " + self._driver.title)
 
@@ -105,7 +107,7 @@ class MiniWoBInstance:
                 '"info": WOB_REWARD_REASON,'
                 '};')
 
-    def begin_task(self, seed=None):
+    def begin_task(self, seed=None, dynamic_params=None):
         """
         args:
             seed: e.g. 'hello', 'itsme',
@@ -114,6 +116,8 @@ class MiniWoBInstance:
         if seed is not None:
             self._driver.execute_script('Math.seedrandom({});'.format(repr(seed)))
         # print(self._driver.execute_script('return WOB_TASK_READY;') )
+        if dynamic_params is not None:
+                self._driver.execute_script('core.initializeDynamicParams({});'.format(repr(dynamic_params)))
         self._driver.execute_script('core.startEpisodeReal();')
 
     def force_stop(self):

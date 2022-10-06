@@ -8,15 +8,17 @@ from pprint import pprint
 class MiniWoBEnvironment:
     default_kept_attrs = ["ref", "tag", "text", "classes"]
 
-    def __init__(self, task_name, customizer):
+    def __init__(self, task_name, customizer, dynamic_params=None):
         self._instance = MiniWoBInstance(task_name+".html")
         self._customizer = customizer
         self._epi_step = 0
-        self._epi_reward = 0
+        # self.epi_reward = 0
+        self._epi_reward = -1.0
         self._curr_doms = None
         self._curr_goal = None
         self._curr_top_dom = None
         self._curr_leaves = None
+        self._dynamic_params = dynamic_params
 
     @property
     def epi_step(self):
@@ -33,11 +35,12 @@ class MiniWoBEnvironment:
     def reset(self, seed=None):
         # TODO
         self._instance.force_stop()
-        self._instance.begin_task(seed)
+        self._instance.begin_task(seed, dynamic_params=self._dynamic_params)
         self._curr_goal = None
         self._curr_doms, self._curr_goal, self._curr_leaves, self._curr_top_dom = self._get_env_state()
         self._epi_step = 0
         self._epi_reward = 0
+        # self._epi_reward = -1.0
         item_tuple = (self._curr_doms, self._curr_goal, self._curr_leaves)
         # ipdb.set_trace()
         return item_tuple
@@ -97,6 +100,7 @@ class MiniWoBEnvironment:
             self._instance.focus_and_type(dom_ref, form_text)
         else:
             raise ValueError("not valid act type")
+        # print(self._epi_step)
         self._curr_doms, _, self._curr_leaves, self._curr_top_dom = self._get_env_state()
         metadata = self._instance.metadata
         reward, done = metadata["raw_reward"], metadata["done"]

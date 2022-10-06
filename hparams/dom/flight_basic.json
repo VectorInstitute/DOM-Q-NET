@@ -1,0 +1,10 @@
+{
+    "max_num_doms": 301,
+    "V_size": 1000,
+    "goal_max_num_tokens": 25,
+    "use_goal_attn": true,
+    "use_goal_cat": true,
+    "use_local": true,
+    "use_neighbor": true,
+    "use_global": true
+}

@@ -1,0 +1,634 @@
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
+  margin-left: -8px;
+  position: absolute;
+}
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle, .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
+  box-sizing: content-box;
+  position: absolute;
+  border: 8px solid transparent;
+  height: 0;
+  width: 1px;
+}
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
+  content: "";
+  z-index: -1;
+  border-width: 8px;
+  left: -8px;
+  border-bottom-color: #CCC;
+}
+
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
+  top: 0;
+  margin-top: -8px;
+}
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
+  border-top: none;
+  border-bottom-color: #fff;
+}
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
+  top: -1px;
+  border-bottom-color: #CCC;
+}
+
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle {
+  bottom: 0;
+  margin-bottom: -8px;
+}
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle, .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before {
+  border-bottom: none;
+  border-top-color: #fff;
+}
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before {
+  bottom: -1px;
+  border-top-color: #CCC;
+}
+
+.react-datepicker-wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.react-datepicker {
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  position: relative;
+  width: 22rem;
+  max-height: 25rem;
+  padding: 1rem 0;
+}
+
+.react-datepicker__triangle {
+  position: absolute;
+  left: 11rem;
+}
+
+.react-datepicker-popper {
+  z-index: 1;
+}
+.react-datepicker-popper[data-placement^=bottom] {
+  margin-top: 10px;
+}
+.react-datepicker-popper[data-placement^=top] {
+  margin-bottom: 6px;
+}
+.react-datepicker-popper[data-placement^=right] {
+  margin-left: 8px;
+}
+.react-datepicker-popper[data-placement^=right] .react-datepicker__triangle {
+  left: auto;
+  right: 42px;
+}
+.react-datepicker-popper[data-placement^=left] {
+  margin-right: 8px;
+}
+.react-datepicker-popper[data-placement^=left] .react-datepicker__triangle {
+  left: 42px;
+  right: auto;
+}
+
+.react-datepicker__header {
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+}
+.react-datepicker__header .react-datepicker__day-name {
+  font-weight: 400;
+  color: #999;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 1px 6.5px;
+  border-radius: 0;
+  line-height: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.react-datepicker__current-month {
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.react-datepicker__navigation {
+  border: none;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  z-index: 1;
+  background-repeat: no-repeat;
+  text-indent: -999rem;
+}
+.react-datepicker__navigation--previous {
+  left: 1rem;
+  background-image: url(data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9IiNkYTM3NDMiPgo8dGl0bGU+YXJyb3ctbGVmdDI8L3RpdGxlPgo8cGF0aCBkPSJNMjIuMjUgMjcuNWMwLjM3NSAwLjM3NSAwLjM3NSAxLjEyNSAwIDEuNTYzLTAuNDM4IDAuMzc1LTEuMTI1IDAuNDM4LTEuNTYzIDBsLTEyLjU2My0xMi42ODhjLTAuNDM4LTAuNDM4LTAuNDM4LTEuMTI1IDAtMS41NjNsMTIuNTYzLTEyLjYyNWMwLjQzOC0wLjQzOCAxLjEyNS0wLjQzOCAxLjU2MyAwIDAuMzc1IDAuNDM4IDAuMzc1IDEuMTI1IDAgMS41NjNsLTExLjQzOCAxMS44NzV6Ij48L3BhdGg+Cjwvc3ZnPgo=);
+}
+.react-datepicker__navigation--next {
+  right: 1rem;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9IiNkYTM3NDMiPgo8dGl0bGU+YXJyb3ctcmlnaHQyPC90aXRsZT4KPHBhdGggZD0iTTIxLjE4OCAxNS42MjVsLTExLjQzOC0xMS44NzVjLTAuMzc1LTAuNDM4LTAuMzc1LTEuMTI1IDAtMS41NjMgMC40MzgtMC40MzggMS4xMjUtMC40MzggMS41NjMgMGwxMi41NjMgMTIuNjI1YzAuNDM4IDAuNDM4IDAuNDM4IDEuMTI1IDAgMS41NjNsLTEyLjU2MyAxMi42ODhjLTAuNDM4IDAuMzc1LTEuMTI1IDAuMzc1LTEuNTYzIDAtMC4zNzUtMC40MzgtMC4zNzUtMS4xODggMC0xLjYyNXoiPjwvcGF0aD4KPC9zdmc+Cg==);
+}
+
+.react-datepicker__month-container {
+  display: inline;
+  float: center;
+}
+
+.react-datepicker__month {
+  text-align: center;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  color: #333;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1.95;
+  text-align: center;
+  margin: 1px 6.5px;
+  border-radius: 100%;
+}
+
+.react-datepicker__day {
+  cursor: pointer;
+}
+.react-datepicker__day:hover {
+  color: #da3743;
+  background-color: #f7d7d9;
+}
+.react-datepicker__day--today {
+  background-color: #f2f2f2;
+}
+.react-datepicker__day--highlighted {
+  background-color: #da3743;
+  color: #fff;
+}
+.react-datepicker__day--highlighted:hover {
+  background-color: #d12733;
+}
+.react-datepicker__day--selected {
+  background-color: #da3743;
+  color: #fff;
+}
+.react-datepicker__day--selected:hover {
+  background-color: #d12733;
+  color: #fff;
+}
+.react-datepicker__day--keyboard-selected {
+  background-color: #e2626b;
+  color: #fff;
+}
+.react-datepicker__day--keyboard-selected:hover {
+  background-color: #f3c2c5;
+  color: #fff;
+}
+.react-datepicker__day--disabled {
+  cursor: default;
+  color: #ccc;
+}
+.react-datepicker__day--disabled:hover {
+  color: #ccc;
+  background-color: transparent;
+}
+.react-datepicker__day--outside-month:not(.react-datepicker__day--selected) {
+  color: #999;
+}
+.react-datepicker__day--outside-month:not(.react-datepicker__day--selected):hover {
+  color: #da3743;
+}
+.react-datepicker__day--outside-month.react-datepicker__day--selected:hover {
+  color: #fff;
+}
+
+.react-datepicker__input-container {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+.react-datepicker__input-container input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * Use design token: font-weight-medium, $font-weight-bold
+ */
+/**
+ * Use same font face from new rest profile page
+ * https://github.com/opentable/start-page-nodejs/blob/develop/restaurant-profile/src/components/page/styles.css#L13-L32
+ * The font definitions are temporary. The long term plan is for the values to come from design tokens
+ */
+@font-face {
+  font-family: "BrandonText";
+  src: url("https://cdn.otstatic.com/common/font/Brandon/Brandon_txt_reg-webfont.woff2") format("woff2"), url("https://cdn.otstatic.com/common/font/Brandon/Brandon_txt_reg-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "BrandonText";
+  src: url("https://cdn.otstatic.com/common/font/Brandon/Brandon_txt_med-webfont.woff2") format("woff2"), url("https://cdn.otstatic.com/common/font/Brandon/Brandon_txt_med-webfont.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "BrandonText";
+  src: url("https://cdn.otstatic.com/common/font/Brandon/Brandon_txt_bld-webfont.woff2") format("woff2"), url("https://cdn.otstatic.com/common/font/Brandon/Brandon_txt_bld-webfont.woff") format("woff");
+  font-weight: bold;
+}
+/**
+ * Use same font font-family from new rest profile page
+ * https://github.com/opentable/start-page-nodejs/blob/develop/restaurant-profile/src/components/page/styles.css#L35
+ */
+/**
+ * -webkit-font-smoothing and -moz-osx-font-smoothing
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth (only Mac OS X/macOS)
+ *
+ * text-size-adjust - https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+ * why is 100%, not none - https://blog.55minutes.com/2012/04/iphone-text-resizing/
+ */
+body {
+  font-family: "BrandonText", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: "transparent";
+  padding: 0;
+  margin: 0;
+  /**
+   * Fixes iframe sizing issues on iOS devices
+   */
+  width: 1px;
+  min-width: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "BrandonText", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+li, ul {
+  list-style: none;
+}
+
+.global-footer-system-info {
+  position: fixed;
+  bottom: 0;
+  color: transparent;
+}

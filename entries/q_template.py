@@ -18,7 +18,7 @@ def create_q_entry(create_build_f, create_env_f, create_action_space_f):
         batch_device = torch.device(settings.get("batch_device", "cuda:0"))
         saved_path = os.path.join(res_dir, "ckpt")
         print("Saving result under %s" % saved_path) 
-
+        # import pdb; pdb.set_trace()
         ckpt_exists = os.path.exists(saved_path)
 
         if not ckpt_exists:
@@ -104,6 +104,7 @@ def create_q_entry(create_build_f, create_env_f, create_action_space_f):
                     )
         else:
             ckpt = torch.load(saved_path)
+            #init_epi, init_step = 0, 0
             init_epi, init_step = ckpt["init_epi"], ckpt["init_step"]
             nn_hs, qlearn_hs, replay_hs, other_hs = ckpt["hparams_list"]
             T_total = qlearn_hs["T_total"]
@@ -122,6 +123,11 @@ def create_q_entry(create_build_f, create_env_f, create_action_space_f):
         q_net, net_track_f = build_net_f(buffer_device, batch_device)
         save_dict["net"] = q_net.state_dict()
         save_dict["hparams_list"] = (nn_hs, qlearn_hs, replay_hs, other_hs)
+        # import pdb; pdb.set_trace()
+        # save_dict["replay_buffer"] = replay_buffer
+        # save_dict["tracker"] = tracker
+        # save_dict["init_epi"] = init_epi
+        # save_dict["init_step"] = init_step
 
         if settings.get('save_ckpt', False):
             def save_f(step=None):
